@@ -1,0 +1,45 @@
+.vacancy {
+	padding-top: 100px;
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 40px;
+	}
+}
+
+.vacancy-card {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	padding-top: 100px;
+	max-width: 680px;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 1;
+	gap: 20px;
+
+	&__inner {
+		display: flex;
+		font-family: var(--font-manege);
+		gap: 40px;
+	}
+
+	&__subtitle {
+		min-width: 170px;
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	&__text {
+		margin: 0;
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	@media (max-width: 992px) {
+		padding: 0;
+	}
+}

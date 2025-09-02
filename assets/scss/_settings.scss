@@ -16,7 +16,7 @@ html {
 body {
 	margin: 0;
 	height: 100%;
-	font-family: var(--font-main);
+	font-family: var(--font-gothic);
 	font-weight: 300;
 	line-height: var(--line-height);
 	color: var(--dark-color);
@@ -43,6 +43,10 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: $container-width + px;
+}
+
+.section {
+	padding: 50px 0;
 }
 
 img {

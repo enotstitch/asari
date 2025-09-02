@@ -76,6 +76,12 @@
 		@include adaptive-font(22, 18);
 	}
 
+	&--column {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 40px;
+	}
+
 	@media (max-width: 576px) {
 		flex-direction: column;
 		align-items: flex-start;

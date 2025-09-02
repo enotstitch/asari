@@ -1,0 +1,5 @@
+@use 'mixins/font-face' as *;
+@include font-face('CoFoGothic', 'CoFoGothic-Light', 300, normal);
+@include font-face('CoFoGothic', 'CoFoGothic-Regular', 400, normal);
+@include font-face('CoFoGothic', 'CoFoGothic-Bold', 700, normal);
+@include font-face('Manege', 'Manege-Light', 300, normal);

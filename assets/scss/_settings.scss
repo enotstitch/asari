@@ -32,6 +32,7 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
 	min-height: 100%;
 }
 
@@ -43,6 +44,10 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: $container-width + px;
+}
+
+.section {
+	padding: 50px 0;
 }
 
 img {

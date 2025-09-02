@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 export function initSwiper() {
 	new Swiper('.team__slider', {
@@ -16,6 +16,17 @@ export function initSwiper() {
 			577: {
 				slidesPerGroup: 2,
 			},
+		},
+	});
+
+	new Swiper('.career__slider', {
+		modules: [Pagination],
+		slidesPerView: 1,
+		spaceBetween: 10,
+
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
 		},
 	});
 }

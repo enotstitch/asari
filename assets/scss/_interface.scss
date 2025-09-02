@@ -64,6 +64,18 @@
 	margin-bottom: 40px;
 	gap: 20px 10px;
 
+	&__inner {
+		width: 100%;
+		max-width: 49%;
+	}
+
+	&__text {
+		margin: 0;
+		font-weight: 200;
+		line-height: 1;
+		@include adaptive-font(22, 18);
+	}
+
 	@media (max-width: 576px) {
 		flex-direction: column;
 		align-items: flex-start;
@@ -95,6 +107,7 @@
 	border: 1px solid var(--light-gray-color);
 	border-radius: 30px;
 	padding: 10px 15px;
+	width: fit-content;
 	background-color: var(--light-gray-color);
 	transition: filter var(--time);
 	gap: 10px;
@@ -141,5 +154,9 @@
 	@media (max-width: 576px) {
 		padding: 20px;
 		width: 100%;
+
+		&--width-small {
+			width: fit-content;
+		}
 	}
 }

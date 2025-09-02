@@ -8,4 +8,7 @@
 @use './chunk/header';
 @use './chunk/hero';
 @use './chunk/expertise';
+@use './chunk/team';
+@use '../../node_modules/swiper/swiper';
+@use '../../node_modules/swiper/modules/navigation';
 @use './chunk/footer';

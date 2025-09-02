@@ -1,6 +1,5 @@
 @use 'mixins/adaptive-font' as *;
 @use './chunk/burger-menu';
-@use 'mixins/adaptive-font' as *;
 
 .logo {
 	display: flex;
@@ -134,7 +133,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border: 1px solid var(--light-gray-color);
+	border: 1px solid var(--border-color);
 	border-radius: 30px;
 	padding: 10px 15px;
 	width: fit-content;
@@ -188,5 +187,60 @@
 		&--width-small {
 			width: fit-content;
 		}
+	}
+}
+
+.input {
+	outline: 1px solid transparent;
+	border: 1px solid var(--border-color);
+	border-radius: 100px;
+	padding: 15px;
+	width: 100%;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1;
+	transition: outline-color var(--time);
+
+	&::placeholder {
+		color: var(--dark-color);
+	}
+
+	&:focus {
+		outline-color: var(--accent-color);
+	}
+}
+
+.submit {
+	border: 1px solid var(--border-color);
+	border-radius: 100px;
+	padding: 10px 15px;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 1;
+	transition:
+		border-color var(--time),
+		opacity var(--time);
+	cursor: pointer;
+
+	&:hover {
+		border-color: var(--accent-color);
+		opacity: 0.7;
+	}
+}
+
+.policy {
+	margin: 0;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1;
+	opacity: 0.4;
+}
+
+.policy-link {
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
 	}
 }

@@ -1,0 +1,114 @@
+@use 'mixins/adaptive-font' as *;
+
+.contacts {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 50px;
+
+	&__info {
+		flex-shrink: 0;
+		padding-bottom: 100px;
+		max-width: 560px;
+
+		@media (max-width: 768px) {
+			padding-bottom: 0;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 165px;
+		font-family: var(--font-manege);
+		font-weight: 300;
+		line-height: 1;
+		@include adaptive-font(48, 26);
+
+		@media (max-width: 768px) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 40px;
+	}
+
+	&__link {
+		font-family: var(--font-manege);
+		line-height: 1;
+		transition: opacity var(--time);
+		@include adaptive-font(32, 22);
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&__address {
+		max-width: 220px;
+		font-weight: 300;
+		font-style: normal;
+		line-height: 1;
+		@include adaptive-font(22, 18);
+
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
+	}
+
+	&__feedback {
+		max-width: 560px;
+
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
+	}
+
+	&__texts {
+		margin-bottom: 40px;
+	}
+
+	&__subtitle {
+		margin: 0;
+		margin-bottom: 15px;
+		max-width: 415px;
+		font-weight: 300;
+		line-height: 1;
+		@include adaptive-font(48, 26);
+	}
+
+	&__text {
+		margin: 0;
+		line-height: 1;
+		opacity: 0.4;
+		@include adaptive-font(22, 18);
+	}
+
+	&__form {
+		& form {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		& .form-inner {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+
+			@media (max-width: 576px) {
+				flex-direction: column;
+				align-items: stretch;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+}

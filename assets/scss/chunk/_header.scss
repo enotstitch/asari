@@ -8,8 +8,23 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	&__menu {
+		width: 100%;
+	}
+
+	.menu__body {
+		width: 100%;
+	}
+
+	.menu__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
 	}
 
 	&--sticky {

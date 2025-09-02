@@ -1,5 +1,6 @@
 @use 'mixins/adaptive-font' as *;
 @use './chunk/burger-menu';
+@use 'mixins/adaptive-font' as *;
 
 .logo {
 	display: flex;
@@ -63,20 +64,16 @@
 	margin-bottom: 40px;
 	gap: 20px 10px;
 
-	&__text {
-		margin: 0;
+	&__inner {
 		width: 100%;
 		max-width: 49%;
+	}
+
+	&__text {
+		margin: 0;
 		font-weight: 200;
 		line-height: 1;
 		@include adaptive-font(22, 18);
-	}
-
-	&--column {
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 40px;
 	}
 
 	@media (max-width: 576px) {
@@ -157,5 +154,9 @@
 	@media (max-width: 576px) {
 		padding: 20px;
 		width: 100%;
+
+		&--width-small {
+			width: fit-content;
+		}
 	}
 }

@@ -94,6 +94,10 @@ img {
 	border: 2px solid var(--error-color);
 }
 
+.is-hidden {
+	display: none !important;
+}
+
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
 	position: static;

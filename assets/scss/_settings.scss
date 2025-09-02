@@ -97,26 +97,3 @@ img {
 .is-hidden {
 	display: none !important;
 }
-
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-	position: static;
-	margin: 0;
-	border: 1px solid var(--accent-color);
-	border-radius: 100%;
-	width: 35px;
-	height: 35px;
-	color: var(--accent-color);
-	transition:
-		color var(--time),
-		background-color var(--time);
-
-	&::after {
-		font-size: 14px;
-	}
-
-	&:hover {
-		color: var(--light-color);
-		background-color: var(--accent-color);
-	}
-}

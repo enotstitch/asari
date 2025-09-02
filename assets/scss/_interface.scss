@@ -1,3 +1,4 @@
+@use 'mixins/adaptive-font' as *;
 @use './chunk/burger-menu';
 @use 'mixins/adaptive-font' as *;
 
@@ -45,7 +46,9 @@
 	}
 
 	&__link {
+		line-height: 1;
 		transition: opacity var(--time);
+		@include adaptive-font(22, 18);
 
 		&:hover {
 			opacity: 0.5;

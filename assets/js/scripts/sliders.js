@@ -29,4 +29,15 @@ export function initSwiper() {
 			clickable: true,
 		},
 	});
+
+	new Swiper('.admins__slider', {
+		modules: [Pagination],
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
 }

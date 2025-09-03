@@ -48,6 +48,27 @@ body {
 
 .section {
 	padding: 50px 0;
+
+	&--single-expertise {
+		min-height: 100vh;
+		background-position: right -215px bottom -275px;
+		background-size: 900px;
+		background-repeat: no-repeat;
+
+		@media (max-width: 992px) {
+			background-position: right -215px bottom -235px;
+			background-size: 700px;
+		}
+
+		@media (max-width: 768px) {
+			background-position: right -140px bottom -145px;
+			background-size: 500px;
+		}
+
+		@media (max-width: 576px) {
+			background-size: 0;
+		}
+	}
 }
 
 img {

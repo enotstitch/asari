@@ -3,6 +3,13 @@
 		overflow: visible !important;
 	}
 
+	&__cards {
+		display: grid;
+		justify-content: space-evenly;
+		grid-template-columns: repeat(auto-fit, minmax(215px, 215px));
+		gap: 60px 65px;
+	}
+
 	&__link {
 		margin-bottom: 40px;
 	}
@@ -27,7 +34,7 @@
 	}
 }
 
-.team-slide {
+.team-card {
 	max-width: 215px;
 
 	&__inner {
@@ -66,7 +73,7 @@
 	}
 
 	&:hover {
-		& .team-slide__img--hover {
+		& .team-card__img--hover {
 			opacity: 1;
 			visibility: visible;
 		}

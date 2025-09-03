@@ -76,18 +76,6 @@
 		line-height: 1;
 	}
 
-	&__tags {
-		display: flex;
-		gap: 10px;
-		padding-bottom: 30px;
-	}
-
-	&__tag {
-		border: 1px solid var(--border-color);
-		border-radius: 30px;
-		padding: 10px 14px;
-	}
-
 	&.open &__icon::after {
 		transform: translate(-50%, -30%) rotate(-135deg);
 	}

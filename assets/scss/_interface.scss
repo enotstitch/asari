@@ -372,3 +372,15 @@
 		}
 	}
 }
+
+.tags {
+	display: flex;
+	gap: 10px;
+	padding-bottom: 30px;
+
+	&__item {
+		border: 1px solid var(--border-color);
+		border-radius: 30px;
+		padding: 10px 14px;
+	}
+}

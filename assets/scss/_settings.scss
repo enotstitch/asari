@@ -81,25 +81,22 @@ body {
 		&::after {
 			content: '';
 			position: absolute;
-			left: -655px;
-			bottom: -800px;
+			left: 0;
+			top: 50%;
 			width: 1300px;
 			height: 1300px;
 			background-image: url('@img/general/circle-decor.webp');
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
+			transform: translate(-50%, -50%);
 
 			@media (max-width: 992px) {
-				left: -435px;
-				bottom: -430px;
 				width: 700px;
 				height: 700px;
 			}
 
 			@media (max-width: 768px) {
-				left: -235px;
-				bottom: -280px;
 				width: 500px;
 				height: 500px;
 			}

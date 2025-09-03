@@ -86,3 +86,26 @@
 		}
 	}
 }
+
+.single-expertise {
+	padding-top: 100px;
+
+	&__wrap {
+		max-width: 555px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 20px;
+		font-family: var(--font-manege);
+		font-weight: 300;
+		line-height: 1;
+		@include adaptive-font(48, 26);
+	}
+
+	&__text {
+		margin: 0;
+		line-height: 1;
+		@include adaptive-font(22, 18);
+	}
+}

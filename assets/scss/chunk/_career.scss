@@ -99,6 +99,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: 170px;
+
+		@media (max-width: 768px) {
+			gap: 50px;
+		}
 	}
 
 	&__inner {
@@ -132,5 +136,16 @@
 		flex-shrink: 0;
 		margin-right: -30px;
 		min-width: 710px;
+
+		@media (max-width: 1200px) {
+			flex-shrink: 1;
+			margin: 0;
+			min-width: 0;
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }

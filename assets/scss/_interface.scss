@@ -372,3 +372,17 @@
 		}
 	}
 }
+
+.button-show-more {
+	border: 1px solid var(--border-color);
+	border-radius: 30px;
+	padding: 10px 15px;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 1;
+	transition: background-color var(--time);
+
+	&:hover {
+		background-color: var(--light-gray-color);
+	}
+}

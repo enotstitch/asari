@@ -76,6 +76,10 @@
 		line-height: 1;
 	}
 
+	&__tags {
+		padding-bottom: 30px;
+	}
+
 	&.open &__icon::after {
 		transform: translate(-50%, -30%) rotate(-135deg);
 	}

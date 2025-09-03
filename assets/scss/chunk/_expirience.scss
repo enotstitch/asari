@@ -1,0 +1,62 @@
+@use 'mixins/adaptive-font' as *;
+
+.expirience {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 50px 20px;
+
+	&__inner {
+		max-width: 49%;
+
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 25px;
+		font-weight: 300;
+		line-height: 1;
+		@include adaptive-font(48, 26);
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		border-radius: 32px;
+		padding: 25px;
+		box-shadow: 0 0 25px 0 rgb(184 203 229 / 40%);
+		background: var(--light-color);
+
+		&--gap-big {
+			gap: 25px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		border-radius: 25px;
+		padding: 15px 25px;
+		background-color: var(--light-gray-color);
+	}
+
+	&__subtitle {
+		line-height: 1;
+		@include adaptive-font(22, 18);
+	}
+
+	&__text {
+		line-height: 1;
+		color: #000;
+		@include adaptive-font(16, 14);
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+}

@@ -405,3 +405,15 @@
 		}
 	}
 }
+
+.tags {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+
+	&__item {
+		border: 1px solid var(--border-color);
+		border-radius: 30px;
+		padding: 10px 14px;
+	}
+}

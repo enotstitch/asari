@@ -3,6 +3,7 @@ import { initSwiper } from './scripts/sliders.js';
 import { initSelect } from './scripts/select.js';
 import './scripts/animations.js';
 import './scripts/quiz.js';
+import './modules/spollers/spollers.js';
 
 initHeader();
 initSwiper();

@@ -1,0 +1,94 @@
+@use 'mixins/adaptive-font' as *;
+
+.spollers {
+	display: flex;
+	flex-direction: column;
+}
+
+.spoller {
+	border-bottom: 1px solid var(--gray-color);
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 30px 0;
+		cursor: pointer;
+		user-select: none;
+
+		&::marker {
+			content: '';
+			font-size: 0;
+		}
+
+		@media (max-width: 576px) {
+			padding: 25px 0;
+		}
+	}
+
+	&__title {
+		padding-right: 50px;
+		line-height: 1;
+		@include adaptive-font(32, 22);
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__icon {
+		position: relative;
+		display: inline-block;
+		flex-shrink: 0;
+		border: 1px solid var(--accent-color);
+		border-radius: 50%;
+		width: 32px;
+		height: 32px;
+		text-align: center;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			border: 1px solid var(--accent-color);
+			border-top: none;
+			border-left: none;
+			width: 10px;
+			height: 10px;
+			transform: translate(-50%, -70%) rotate(45deg);
+			transition: transform 0.3s;
+		}
+	}
+
+	&__content {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.3s ease;
+	}
+
+	&__text {
+		margin: 0;
+		padding-bottom: 20px;
+		font-size: 22px;
+		line-height: 1;
+	}
+
+	&__tags {
+		display: flex;
+		gap: 10px;
+		padding-bottom: 30px;
+	}
+
+	&__tag {
+		border: 1px solid var(--border-color);
+		border-radius: 30px;
+		padding: 10px 14px;
+	}
+
+	&.open &__icon::after {
+		transform: translate(-50%, -30%) rotate(-135deg);
+	}
+}

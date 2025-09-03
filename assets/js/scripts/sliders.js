@@ -40,4 +40,14 @@ export function initSwiper() {
 			clickable: true,
 		},
 	});
+
+	new Swiper('.services__slider', {
+		modules: [Navigation],
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 }

@@ -69,6 +69,44 @@ body {
 			background-size: 0;
 		}
 	}
+
+	&--conditions {
+		position: relative;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		min-height: 100vh;
+		background: linear-gradient(0deg, #b8cbe5 -27.96%, rgb(255 255 255 / 0%) 86.41%);
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 1300px;
+			height: 1300px;
+			background-image: url('@img/general/circle-decor.webp');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translate(-50%, -50%);
+
+			@media (max-width: 992px) {
+				width: 700px;
+				height: 700px;
+			}
+
+			@media (max-width: 768px) {
+				width: 500px;
+				height: 500px;
+			}
+
+			@media (max-width: 576px) {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
 }
 
 img {

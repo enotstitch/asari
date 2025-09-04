@@ -17,10 +17,12 @@ quizItems.forEach((quizItem) => {
 		quizItem.style.backgroundColor = 'var(--light-gray-color)';
 
 		// Показать текст под карточкой
+		quizText.style.height = '0';
 		quizText.classList.remove('show');
 		setTimeout(() => {
 			quizText.textContent = quizItem.dataset.text;
+			quizText.style.height = `${quizText.scrollHeight + 30}px`;
 			quizText.classList.add('show');
-		}, 100);
+		}, 500);
 	});
 });

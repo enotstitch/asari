@@ -2,52 +2,68 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
 export function initSwiper() {
-	new Swiper('.team__slider', {
-		modules: [Navigation],
-		slidesPerView: 'auto',
-		spaceBetween: 35,
-		slidesPerGroup: 1,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-
-		breakpoints: {
-			577: {
-				slidesPerGroup: 2,
+	try {
+		new Swiper('.team__slider', {
+			modules: [Navigation],
+			slidesPerView: 'auto',
+			spaceBetween: 35,
+			slidesPerGroup: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
 			},
-		},
-	});
 
-	new Swiper('.career__slider', {
-		modules: [Pagination],
-		slidesPerView: 1,
-		spaceBetween: 10,
+			breakpoints: {
+				577: {
+					slidesPerGroup: 2,
+				},
+			},
+		});
+	} catch {
+		console.warn('Слайдер не инициализирован');
+	}
 
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
-	});
+	try {
+		new Swiper('.career__slider', {
+			modules: [Pagination],
+			slidesPerView: 1,
+			spaceBetween: 10,
 
-	new Swiper('.admins__slider', {
-		modules: [Pagination],
-		slidesPerView: 'auto',
-		spaceBetween: 10,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	} catch {
+		console.warn('Слайдер не инициализирован');
+	}
 
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
-	});
+	try {
+		new Swiper('.admins__slider', {
+			modules: [Pagination],
+			slidesPerView: 'auto',
+			spaceBetween: 10,
 
-	new Swiper('.services__slider', {
-		modules: [Navigation],
-		slidesPerView: 'auto',
-		spaceBetween: 20,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	});
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	} catch {
+		console.warn('Слайдер не инициализирован');
+	}
+
+	try {
+		new Swiper('.services__slider', {
+			modules: [Navigation],
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	} catch {
+		console.warn('Слайдер не инициализирован');
+	}
 }

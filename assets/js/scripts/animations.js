@@ -220,4 +220,118 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 		x: -120,
 	});
+
+	// Анимация, страницы "О нас"
+	gsap.set('.page-about__text', {
+		y: 100,
+	});
+
+	gsap.set('.page-about__text:first-child', {
+		y: 0,
+	});
+
+	const items = document.querySelectorAll('.page-about__text');
+
+	items.forEach((item, index) => {
+		if (index == 0) {
+			gsap.to(item, {
+				y: '-100vh',
+				scrollTrigger: {
+					trigger: '.page-about',
+					start: 'top top',
+					end: 'bottom bottom',
+					scrub: 4,
+				},
+			});
+		}
+
+		if (index == 1) {
+			gsap.fromTo(
+				item,
+				{
+					opacity: 0,
+				},
+				{
+					opacity: 1,
+					scrollTrigger: {
+						trigger: '.page-about',
+						start: 'top top',
+						end: 'bottom bottom',
+						scrub: 2,
+					},
+				},
+			);
+
+			gsap.to(item, {
+				y: '-50vh',
+				scrollTrigger: {
+					trigger: '.page-about__wrap:nth-child(2)',
+					start: '-10% top',
+					end: 'bottom 20%',
+					scrub: 4,
+				},
+			});
+		}
+
+		if (index == 2) {
+			gsap.fromTo(
+				item,
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					scrollTrigger: {
+						trigger: '.page-about__wrap:nth-child(3)',
+						start: '40% bottom',
+						end: 'bottom 20%',
+						scrub: 2,
+					},
+				},
+			);
+
+			gsap.to(item, {
+				y: '-20vh',
+				scrollTrigger: {
+					trigger: '.page-about__wrap:nth-child(3)',
+					start: 'top top',
+					end: 'bottom bottom',
+					scrub: 2,
+				},
+			});
+		}
+	});
+
+	// Карточки "О нас"
+	gsap.from('.about-cards', {
+		y: '100',
+		scrollTrigger: {
+			trigger: '.about-cards',
+			start: 'top bottom',
+			end: 'bottom bottom',
+			scrub: 2,
+		},
+	});
+
+	// Доверители
+	gsap.from('.conventors', {
+		y: '100',
+		scrollTrigger: {
+			trigger: '.conventors',
+			start: 'top bottom',
+			end: 'bottom bottom',
+			scrub: 2,
+			markers: true,
+		},
+	});
+
+	// Бегущая строка "Победы"
+	gsap.to('.victory-ratings', {
+		xPercent: -100,
+		repeat: -1,
+		duration: 10,
+		ease: 'linear',
+	});
 });

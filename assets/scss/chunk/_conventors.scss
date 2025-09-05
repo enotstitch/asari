@@ -1,0 +1,36 @@
+.conventors {
+	&__text {
+		margin: 0;
+		max-width: 355px;
+		font-size: 22px;
+		line-height: 1;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+
+		@media (max-width: 1200px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__img {
+		position: relative;
+		display: flex;
+		height: 760px;
+		min-width: 710px;
+
+		img {
+			width: 100%;
+		}
+	}
+}
